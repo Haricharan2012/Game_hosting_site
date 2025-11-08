@@ -1,0 +1,12 @@
+ disp()
+    {
+      const dbname = "leaderboard";
+      const requestDB = window.indexedDB.open(dbname);
+       let db = requestDB.result;
+      let transaction = db.transaction("score", "readwrite");
+      let store = transaction.objectStore("score");
+      store.get("1");
+      request.onsuccess = function(event) {
+       // Do something with the request.result!
+     alert("score is " + request.result.score)
+    }

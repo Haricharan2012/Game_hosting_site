@@ -1,0 +1,334 @@
+.main
+{
+background-color: #ead420;
+margin:10px;
+border-radius:5px;
+padding:20px;
+font-size:110%;
+
+
+height:50%;
+margin:0;
+
+
+}
+#gor
+ {
+ display:block;
+width:1000px;
+position:absolute;
+left:680px;
+top:2000px;
+border-width:0px;
+ box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);	
+   border-radius:2%;
+ }
+
+#of
+{
+display:block;
+width:1000px;
+border-color:orange;
+border-width:0px;
+position:absolute;
+left:700px;
+top:440px;
+ box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+  border-radius:2%;
+}
+
+#if
+  {
+   display:block;
+   width:1000px;
+   border-color:orange;
+    border-width:0px;
+    position:absolute;
+    left:750px;
+    top:1198px; 
+ box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+  border-radius:2%;
+    
+   }
+   
+   #for
+  {
+   display:block;
+   width:1000px;
+   border-color:orange;
+    border-width:0px;
+    position:absolute;
+    left:750px;
+    top:2800px; 
+     box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+      border-radius:2%;
+    
+   }
+  
+  
+
+.spara
+   {
+     
+     font-size:30px;
+     padding-left:600px;
+     color:white;
+     
+   }
+   
+ .sspara
+   {
+     font-size:30px;
+     color:white;
+     padding-left:250px;
+   }
+   
+
+
+#main2
+ {
+ 
+   background-color: 	 	 	#d11c73;
+     margin:1px;
+     padding:10px;
+     margin:0;
+     height:50%;
+ }
+ #main3
+ {
+ 
+   background-color: 	 	 	#0cb077;
+     margin:1px;
+     padding:10px;
+     margin:0;
+     height:50%;
+ }
+ 
+  #main4
+ {
+ 
+   background-color: 	 	#1ba4fc;
+     margin:1px;
+     padding:10px;
+     margin:0;
+     height:50%;
+ }
+
+
+#pl1
+  {
+    position:absolute;
+    top:810px;
+    left:100px;
+    border-radius:0%;
+   
+   }
+   
+   #pl2
+  {
+    position:absolute;
+    top:1560px;
+    left:1860px;
+    border-radius:0%;
+   }
+   
+      #pl3
+  {
+    position:absolute;
+    top:2420px;
+    left:60px;
+    border-radius:0%;
+   }
+   
+        #pl4
+  {
+    position:absolute;
+    top:3220px;
+    left:1850px;
+    border-radius:0%;
+   }
+   
+a:hover
+   {
+     cursor:move;
+   }
+   
+   
+   
+   
+
+
+.image
+ {
+ position:absolute;
+ top:345px;
+ left:100px;
+ box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+ border-radius:3%;
+ clear:both;
+ float:left;
+ border-color:crimson;
+ border-width:3px;
+border-style:solid;
+  }
+ 
+ .image1
+ {
+ position: absolute;
+ top:1094px;
+ left:1860px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+ border-radius:5%;
+ background-color:#FF4F00;
+ float:right;
+ border-color:crimson;
+ border-style:solid;
+ }
+ 
+ .image11
+   {
+      position: absolute;
+ top:650px;
+ left:400px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+ border-radius:3%
+ 
+   }
+ 
+ .image2
+ {
+ position: absolute;
+ top:1955px;
+ left:60px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+ border-radius:3%;
+ border-color:yellow;
+ border-style:solid;
+ }
+
+ 
+ .image3
+ {
+ position: absolute;
+ top:2750px;
+ left:1850px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.25);
+ border-radius:3%;
+  border-color:crimson;
+ border-style:solid;
+ 
+}
+
+
+
+
+
+
+
+
+.butt
+{
+ position: absolute;
+ top:440px;:
+ left:400px;
+ 
+ }
+ 
+ .butt1
+{
+ position: absolute;
+ top:440px;
+ left:640px;
+ }
+ 
+ .butt2
+{
+ position: absolute;
+ top:440px;
+ left:880px;
+ }
+ 
+ .butt3
+{
+ position: absolute;
+ top:440px;
+ left:1120px;
+ }
+ 
+ #subsec
+   {
+     background-color:#1ba4fc;
+     margin:1px;
+     padding:10px;
+     margin:0;
+   }
+   
+  body{
+    margin:0;
+height:100%;
+    }
+    
+   #damu
+     {
+       position:absolute;
+       left:1700px;
+       top:420px;
+       margin:20px;
+       border-color:white;
+    border-width:4px;
+    border-style:solid;
+    height:440px;
+    width:550px;
+    overflow:scroll;
+    border-radius:5%
+    }
+    
+       #damu1
+     {
+       position:absolute;
+       left:150px;
+       top:1177px;
+       margin:20px;
+       border-color:white;
+    border-width:4px;
+    border-style:solid;
+    height:440px;
+    width:550px;
+    overflow:scroll;
+    border-radius:5%;
+    }
+         #damu2
+     {
+       position:absolute;
+       left:1680px;
+       top:1980px;
+       margin:20px;
+       border-color:white;
+    border-width:4px;
+    border-style:solid;
+    height:440px;
+    width:550px;
+    overflow:scroll;
+    border-radius:5%;	
+    }
+    
+     #damu3
+     {
+       position:absolute;
+       left:150px;
+       top:2785px;
+       margin:20px;
+       border-color:white;
+    border-width:4px;
+    border-style:solid;
+    height:440px;
+    width:550px;
+    overflow:scroll;
+    border-radius:5%;
+    }
+  
+  
+
+ 
+ 
+

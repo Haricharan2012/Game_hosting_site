@@ -1,0 +1,143 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation styles */
+#links {
+    background-color: #333;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo styles */
+h1 {
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Arial Black', sans-serif;
+    margin: 0;
+}
+
+/* Navigation links styles */
+#links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#links li {
+    display: inline;
+    padding: 0 10px;
+}
+
+#links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#links a:hover {
+    color: #ffa500;
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Button styles */
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 200px;
+    height: 80px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Game section styles */
+.para {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    font-size: 1em;
+    color: #333;
+}
+
+.img-container {
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 440px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* About section styles */
+#subsec {
+    background-color: #1ba4fc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.para2 {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .para {
+        margin: 10px;
+    }
+    
+    .image {
+        max-width: 100%;
+    }
+    
+    iframe {
+        height: 300px;
+    }
+}

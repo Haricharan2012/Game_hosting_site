@@ -1,0 +1,8 @@
+<html>
+<head>
+<title><b>x</b>Games.com</title>
+</head>
+<body>
+<p>welcome to our website where you can play a plethora of facinating and unique games</p>
+
+

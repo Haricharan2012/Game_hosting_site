@@ -1,0 +1,279 @@
+Got it. Here's the complete HTML code with the responsive functionality added to all four game sections:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XGames</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <style>
+        /* Your CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #links {
+            background-color: #333;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2em;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+        }
+
+        #links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #links li {
+            display: inline;
+            padding: 0 10px;
+        }
+
+        #links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        #links a:hover {
+            color: #ffa500;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2em;
+            margin: 4px;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 200px;
+            height: 80px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .para {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .main {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .img-container {
+            margin-bottom: 20px;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 440px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #subsec {
+            background-color: #1ba4fc;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .para2 {
+            color: #333;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .para {
+                margin: 10px;
+            }
+
+            .image {
+                max-width: 100%;
+            }
+
+            iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="links">
+    <h1><b>X</b>Games</h1>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="http://localhost:8012/links.html">Links</a></li>
+        <li><a href="http://localhost:8012/links.html">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="">Login</a></li>
+    </ul>
+</div>
+
+<h2>TOP GAMES</h2>
+
+<!-- SpaceShoot Game Section -->
+<div class="para">
+    <div class="main">
+        <p class="spara">
+            <div class="img-container">
+                <a href="http://localhost:8058/sp2.html">
+                    <img class="image" src="space333.png" alt="SpaceXShoot" title="SpaceXShoot">
+                </a>
+            </div>
+            <div class="button-container">
+                <button class="button">Learn</button>
+                <button class="button">Play</button>
+                <button class="button">Download</button>
+            </div>
+            <iframe frameborder="0" src="page1.html" name="oof" id="of"></iframe>
+            <figure id="damu">
+                <img src="scren.png" width="550px" height="450">
+                <img src="sp11.png">
+                <img src="ship1.png">
+            </figure>
+        </p>
+    </div>
+</div>
+
+<!-- Pong100 Game Section -->
+<div class="para">
+    <div class="main">
+        <p class="spara">
+            <div class="img-container">
+                <a href="http://localhost:8058/pong100.html">
+                    <img class="image" src="pong100.png" alt="Pong100" title="Pong100">
+                </a>
+            </div>
+            <div class="button-container">
+                <button class="button">Learn</button>
+                <button class="button">Play</button>
+                <button class="button">Download</button>
+            </div>
+            <iframe frameborder="0" src="pong100.html" name="pong100" id="pong100"></iframe>
+            <figure id="pong100-damu">
+                <img src="pong100-screen1.png" width="550px" height="450">
+                <img src="pong100-screen2.png">
+                <img src="pong100-screen3.png">
+            </figure>
+        </p>
+    </div>
+</div>
+
+<!-- Anim4 Game Section -->
+<div class="para">
+    <div class="main">
+        <p class="spara">
+            <div class="img-container">
+                <a href="http://localhost:8058/anim4.html">
+                    <img class="image" src="anim4.jpg" alt="Anim4" title="Anim4">
+                </a>
+            </div>
+            <div class="button-container">
+                <button class="button">Learn</button>
+                <button class="button">Play</button>
+                <button class="button">Download</button>
+            </div>
+            <iframe frameborder="0" src="anim4.html" name="anim4" id
+
+="anim4"></iframe>
+            <figure id="anim4-damu">
+                <img src="anim4-screen1.png" width="550px" height="450">
+                <img src="anim4-screen2.png">
+                <img src="anim4-screen3.png">
+            </figure>
+        </p>
+    </div>
+</div>
+
+<!-- Whack Game Section -->
+<div class="para">
+    <div class="main">
+        <p class="spara">
+            <div class="img-container">
+                <a href="http://localhost:8058/whack.html">
+                    <img class="image" src="whack.png" alt="Whack" title="Whack">
+                </a>
+            </div>
+            <div class="button-container">
+                <button class="button">Learn</button>
+                <button class="button">Play</button>
+                <button class="button">Download</button>
+            </div>
+            <iframe frameborder="0" src="whack.html" name="whack" id="whack"></iframe>
+            <figure id="whack-damu">
+                <img src="whack-screen1.png" width="550px" height="450">
+                <img src="whack-screen2.png">
+                <img src="whack-screen3.png">
+            </figure>
+        </p>
+    </div>
+</div>
+
+<div id="subsec">
+    <form>
+        <p><a name="about"></a></p>
+        <p class="para2">Xgames-Xtreme games unlimited</p>
+        <p style="color: #333;">
+            <b>Our aim is to provide unique and distinct games to gamers of all ages so that there is something interesting and special for everyone. It would also bridge the gap between avid gamers and casual gamers and bring out the absolute significance of a game which is to have <i>'fun'</i></b>
+            <br><br>
+            <p>The aim is to make a unique set of flash games. In which the player/user would be able to choose from a variety of distinct games and those said games would have the ability to run on any kind of modern devices like laptops, smartphones, tablets, TV's etc. This is possible due to the fact that every modern device today has a browser application and these set of games run on a browser. This in turn reduces the hardware requirements needed to play the games as well as brings great versatility as the player/user can play their favorite game anytime, anywhere without any trouble. Along with the games being cross-platform it would also have a unique feature that is to run in an offline mode. As a great assortment of games exists there is something for everyone to play and enjoy. All the games would contain database connectivity through which after the completion of the games the player would be prompted by a text box to enter his/her name which would be stored along with the earned scores in the database. The database would show a list of high scores of different players in a specific order.</p>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
+```
+
+This HTML code incorporates the responsive functionality while preserving all four game sections.
