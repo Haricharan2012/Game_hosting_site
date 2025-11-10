@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XGames - Premium Gaming Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --text-light: #7f8c8d;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2a3a, #2c3e50);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo h1 {
+            color: var(--light);
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-login {
+            background-color: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-login:hover {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+
+        .btn-signup {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-signup:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--light);
+        }
+
+        .btn-hero {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .btn-hero:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Games Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--light);
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .games-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .game-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            transition: var(--transition);
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-header {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .game-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .game-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .game-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+
+        .game-image {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .game-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .game-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-details {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .game-description {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .game-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature {
+            background-color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .game-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-learn {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-learn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-play {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-play:hover {
+            background-color: #c0392b;
+        }
+
+        .btn-download {
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        .btn-download:hover {
+            background-color: #bdc3c7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .game-content {
+                flex-direction: column;
+            }
+
+            .game-image {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .auth-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1><span>X</span>Games</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-link"></i> Links</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-login"><i class="fas fa-sign-in-alt"></i> Login</button>
+                <button class="btn btn-signup"><i class="fas fa-user-plus"></i> Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Experience Premium Gaming</h2>
+            <p>Discover our collection of exciting games that will challenge your skills and ignite your imagination.</p>
+            <a href="#" class="btn-hero">Explore Games <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games-section">
+        <h2 class="section-title">TOP GAMES</h2>
+        <div class="games-container">
+            <!-- Game 1 -->
+            <div class="game-card">
+                <div class="game-header">
+                    <div class="game-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="game-title">SpaceXShoot</h3>
+                </div>
+                <div class="game-content">
+                    <div class="game-image">
+                        <img src="space333.png" alt="SpaceXShoot">
+                    </div>
+                    <div class="game-details">
+                        <p class="game-description">
+                            Embark on an interstellar adventure in SpaceXShoot! Navigate through asteroid fields, battle alien fleets, and save the galaxy from impending doom. With stunning visuals and intense gameplay, this space shooter will keep you on the edge of your seat.
+                        </p>
+                        <div class="game-features">
+                            <span class="feature">Action-Packed</span>
+                            <span class="feature">Space Adventure</span>
+                            <span class="feature">Multiple Levels</span>
+                            <span class="feature">Power-ups</span>
+                        </div>
+                        <div class="game-actions">
+                            <button class="action-btn btn-learn"><i class="fas fa-book"></i> Learn More</button>
+                            <button class="action-btn btn-play"><i class="fas fa-play"></i> Play Now</button>
+                            <button class="action-btn btn-download"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <div class="game-header">
+                    <div class="game-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="game-title">Whack'n'Smack</h3>
+                </div>
+                <div class="game-content">
+                    <div class="game-image">
+                        <img src="whack13.png" alt="Whack'n'Smack">
+                    </div>
+                    <div class="game-details">
+                        <p class="game-description">
+                            Test your reflexes in this fast-paced arcade game! Whack as many targets as you can before time runs out. With increasing difficulty and special bonus rounds, Whack'n'Smack offers endless fun for players of all ages.
+                        </p>
+                        <div class="game-features">
+                            <span class="feature">Arcade</span>
+                            <span class="feature">Reflex Training</span>
+                            <span class="feature">Family Friendly</span>
+                            <span class="feature">High Scores</span>
+                        </div>
+                        <div class="game-actions">
+                            <button class="action-btn btn-learn"><i class="fas fa-book"></i> Learn More</button>
+                            <button class="action-btn btn-play"><i class="fas fa-play"></i> Play Now</button>
+                            <button class="action-btn btn-download"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-card">
+                <div class="game-header">
+                    <div class="game-icon">
+                        <i class="fas fa-table-tennis"></i>
+                    </div>
+                    <h3 class="game-title">Pong Revolution</h3>
+                </div>
+                <div class="game-content">
+                    <div class="game-image">
+                        <img src="pong100.png" alt="Pong">
+                    </div>
+                    <div class="game-details">
+                        <p class="game-description">
+                            The classic game of Pong reimagined for the modern era! Enjoy stunning visuals, multiple game modes, and challenging AI opponents. Whether playing solo or with friends, Pong Revolution delivers timeless fun with a contemporary twist.
+                        </p>
+                        <div class="game-features">
+                            <span class="feature">Classic Remake</span>
+                            <span class="feature">Multiplayer</span>
+                            <span class="feature">Multiple Modes</span>
+                            <span class="feature">Retro Vibes</span>
+                        </div>
+                        <div class="game-actions">
+                            <button class="action-btn btn-learn"><i class="fas fa-book"></i> Learn More</button>
+                            <button class="action-btn btn-play"><i class="fas fa-play"></i> Play Now</button>
+                            <button class="action-btn btn-download"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game 4 -->
+            <div class="game-card">
+                <div class="game-header">
+                    <div class="game-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="game-title">Anime Puzzle</h3>
+                </div>
+                <div class="game-content">
+                    <div class="game-image">
+                        <img src="anim4.png" alt="Anime Puzzle">
+                    </div>
+                    <div class="game-details">
+                        <p class="game-description">
+                            Immerse yourself in beautiful anime artwork while solving challenging puzzles. With hundreds of levels featuring characters from popular anime series, this game combines visual appeal with brain-teasing gameplay that will keep you engaged for hours.
+                        </p>
+                        <div class="game-features">
+                            <span class="feature">Puzzle</span>
+                            <span class="feature">Anime Art</span>
+                            <span class="feature">Hundreds of Levels</span>
+                            <span class="feature">Relaxing</span>
+                        </div>
+                        <div class="game-actions">
+                            <button class="action-btn btn-learn"><i class="fas fa-book"></i> Learn More</button>
+                            <button class="action-btn btn-play"><i class="fas fa-play"></i> Play Now</button>
+                            <button class="action-btn btn-download"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About XGames</h3>
+                <p>XGames is a premium gaming platform dedicated to delivering exceptional gaming experiences to players worldwide. Our collection features diverse genres to suit every gaming preference.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">All Games</a></li>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Top Rated</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">System Requirements</a></li>
+                    <li><a href="#">Download Client</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">EULA</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 XGames. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for button interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.action-btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const gameTitle = this.closest('.game-card').querySelector('.game-title').textContent;
+                    const action = this.textContent.trim();
+                    
+                    alert(`You clicked "${action}" for ${gameTitle}`);
+                });
+            });
+            
+            // Login/Signup buttons
+            const loginBtn = document.querySelector('.btn-login');
+            const signupBtn = document.querySelector('.btn-signup');
+            
+            loginBtn.addEventListener('click', () => {
+                alert('Login feature would open here');
+            });
+            
+            signupBtn.addEventListener('click', () => {
+                alert('Sign up feature would open here');
+            });
+        });
+    </script>
+</body>
+</html>
