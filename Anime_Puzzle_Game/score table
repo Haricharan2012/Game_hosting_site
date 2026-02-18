@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>table</title>
+<script src="puqqzz.js">
+
+</script>
+</head>
+<body>
+<script>
+const dbname = "leaderboard";
+  const requestDB = window.indexedDB.open(dbname);
+  requestDB.onupgradeneeded = () => {
+    let db = requestDB.result;
+ 
+  //};
+  requestDB.onsuccess = function (e) {
+    let db = requestDB.result;
+    let transaction = db.transaction("score", "readwrite");
+   let store = transaction.objectStore("score");
+    let req=objectstore.get(1);
+    req.onsuccess = function (e) {    
+                    document.getElementById("result").innerHTML = "score" + req.result.score + "<br/>playerr: " + req.result.player;    
+                }
+                }
+                };    
+   // store.put({ score: goal, player: player });
+    </script>
+ <button id ="result">get</button>
+</body>
